@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <div class="container-fluid mt-4">
 
     <h4 class="mb-4 mt-7 text-center">Available Courses</h4>
@@ -15,6 +17,11 @@
             </form>
         </div>
     </div>
+
+    @php
+    
+        
+    @endphp
 
     <div class="row">
         <div class="col-md-4 mb-4">
@@ -34,3 +41,4 @@
     </div>
 </div>
 
+@endsection
