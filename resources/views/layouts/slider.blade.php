@@ -6,7 +6,7 @@
     <div class="col-md-2 bg-light .bg-gradient text-dark vh-100 position-fixed p-3" id="sidebar">
         <ul class="nav flex-column">
             <li class="nav-item mb-2">
-                <a href="#" class="nav-link sidebar-link text-dark" style="font-size: 12px;"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a>
+                <a href="{{route('dashboard')}}" class="nav-link sidebar-link text-dark" style="font-size: 12px;"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a>
             </li>
        
         <li class="nav-item text-uppercase fw-bold text-secondary" style="font-size: 10px;">

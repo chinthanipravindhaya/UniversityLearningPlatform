@@ -35,12 +35,15 @@
 
                 <li class="nav-item">
                     <a class="nav-link text-white fs-6" href="#">
-                        <i class="bi bi-person-circle me-1 fs-6 text-white"></i> Chinthani Pravindhaya
+                        <i class="bi bi-person-circle me-1 fs-6 text-white"></i> Chinthani Pravindhayauni
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white fs-6" href="#">Logout</a>
+                    <form method="POST" action="{{route('logout')}}">
+                        @csrf
+                        <a class ="nav-link text-white fs-6" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Logout </a>
+                    </form>    
                 </li>
             </ul>
         </div>
