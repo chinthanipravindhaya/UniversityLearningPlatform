@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,5 +20,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::middleware('admin')->group(function(){
+    Route::get('/student_details',[AdminController::class,'studentDetails'])->name('admin.student');
+    Route::get('/add_course',[AdminController::class,'addCourse'])->name('admin.addcourse');
+});
+
 
 require __DIR__.'/auth.php';

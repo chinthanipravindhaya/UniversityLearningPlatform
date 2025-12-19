@@ -19,18 +19,34 @@
     </div>
 
     @php
+    $materials = [
+        
+            ['title'=>'Introduction to Programming in Python',
+            'desc'=>'Learn the basics of programming using python including variables and loops',
+            'image'=>'images/python.png'
+            ],
+            ['title'=>'Database Management and SQL Basics',
+            'desc'=>'Learn the basics of programming using python including variables and loops',
+            'image'=>'images/database.png'
+            ],
+            [ 'title'=>'Web Development',
+            'desc'=>'Learn the basics of programming using python including variables and loops',
+            'image'=>'images/web.png'
+            ]
+];
     
         
     @endphp
 
     <div class="row">
+        @foreach ($materials as $material)
         <div class="col-md-4 mb-4">
             <div class="card bg-white border text-dark shadow-sm h-100 card-hover">
-                <img src="#" class="card-img-top" alt="Course Image" style="height: 150px; object-fit: cover;">
+                <img src="{{asset($material['image'])}}" class="card-img-top" alt="Course Image" style="height: 150px; object-fit: cover;">
                 <div class="card-body">
-                    <h5 class="card-title text-center fs-6">Course Title</h5>
+                    <h5 class="card-title text-center fs-6">{{$material['title']}}</h5>
                     <p class="card-text fs-6">
-                        Course description goes here.
+                        {{$material['desc']}}
                     </p>
                     <div class="text-center">
                         <a href="#" class="btn btn-outline-secondary btn-sm">See more</a>
@@ -38,6 +54,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </div>
 

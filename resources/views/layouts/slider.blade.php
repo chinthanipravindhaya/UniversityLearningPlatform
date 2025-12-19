@@ -17,7 +17,7 @@
                 <i class="bi bi-journal-bookmark me-2"></i> Courses
             </a>
             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="coursesDropdown">
-                <li><a class="dropdown-item" href="#" style="font-size: 12px";><i class="bi bi-plus-circle me-2"></i> Add Course</a></li>
+                <li><a class="dropdown-item" href="{{route('admin.addcourse')}}" style="font-size: 12px";><i class="bi bi-plus-circle me-2"></i> Add Course</a></li>
                 <li><a class="dropdown-item" href="#" style="font-size: 12px";><i class="bi bi-eye me-2"></i> View Courses</a></li>
             </ul>
         </li>
@@ -83,5 +83,6 @@
 </div>
 <div class="col-md-10 offset-md-2" id="main-content">
     @yield('admin-content')
+    @yield('add_course')
 </div>
 @endsection
