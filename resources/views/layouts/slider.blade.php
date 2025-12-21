@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <div class="row">
     <div class="col-md-2 bg-light .bg-gradient text-dark vh-100 position-fixed p-3" id="sidebar">
         <ul class="nav flex-column">

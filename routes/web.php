@@ -24,6 +24,8 @@ Route::middleware('auth')->group(function () {
 Route::middleware('admin')->group(function(){
     Route::get('/student_details',[AdminController::class,'studentDetails'])->name('admin.student');
     Route::get('/add_course',[AdminController::class,'addCourse'])->name('admin.addcourse');
+    Route::post('/add_course',[AdminController::class,'postAddcourse'])->name('admin.postaddcourse');
+
 });
 
 

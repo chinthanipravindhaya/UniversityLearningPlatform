@@ -5,7 +5,7 @@
 
     <div class="card shadow-sm">
         <div class="card-body">
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="{{route('admin.postaddcourse')}}" method="POST" enctype="multipart/form-data">
                 @csrf 
                 <div class="mb-3">
                     <label for="title" class="form-label fw-semibold">Title</label>
